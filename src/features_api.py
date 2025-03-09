@@ -7,7 +7,6 @@ from feature_processor import process_application_features
 app = FastAPI()
 
 
-
 @app.get("/")
 async def root():
     return {"message": "Hello, world!"}
@@ -18,6 +17,7 @@ class ApplicationData(BaseModel):
     id: float
     application_date: str
     contracts: str
+
 
 # Endpoint to process application data
 @app.post("/process_application")
